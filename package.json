@@ -1,0 +1,21 @@
+{
+  "name": "wish-slots-gaming-platform",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Original free-to-play gaming platform starter",
+  "workspaces": [
+    "apps/website",
+    "apps/admin",
+    "apps/mobile",
+    "games/wish-slots",
+    "backend/api"
+  ],
+  "scripts": {
+    "dev:website": "npm run dev -w @wish-slots/website",
+    "dev:admin": "npm run dev -w @wish-slots/admin",
+    "dev:game": "npm run dev -w @wish-slots/wish-slots-game",
+    "dev:api": "npm run start:dev -w @wish-slots/api",
+    "dev:mobile": "npm run start -w @wish-slots/mobile",
+    "build": "npm run build --workspaces --if-present"
+  }
+}
